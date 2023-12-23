@@ -1,0 +1,9 @@
+EJERCICIO1:
+Elaborar una lista de contactos que contenga nombres,
+cargo y correo. Al lado izquierdo debera aparecer la 
+primera letra de su nombre. Por ultimo, al lado derecho
+una imagen que al presionar deberá llamar al número 
+celular del contacto(investigar como hacerlo con el objeto INTENT).
+Considerar para este último punto que en su modelo de datos 
+deberá tener el atributo "NUMERO DE CELULAR", a pesar de que 
+visualmente no se muestre.
