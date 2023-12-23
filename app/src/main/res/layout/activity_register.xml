@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="16dp"
-    tools:context=".MainActivity">
+    android:paddingHorizontal="16dp"
+    tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/tvLogin"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvSignUp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="LOGIN"
+        android:gravity="center_horizontal"
+        android:text="Register"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,62 +22,68 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtUserNameLog"
+        android:id="@+id/edtNameReg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin"
-        app:endIconDrawable="@drawable/person">
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ingrese su nombre"
-            android:inputType="textPersonName"/>
+            android:hint="nombre usuario" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtUserPassLog"
+        android:id="@+id/edtPassReg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:endIconMode="password_toggle"
         app:endIconContentDescription="ojo"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserNameLog"
-        app:startIconContentDescription="Usuario">
+        app:layout_constraintTop_toBottomOf="@+id/edtNameReg">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ingrese su contraseña"
-            android:inputType="numberPassword" />
+            android:hint="escribir password" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:text="Recordar Usuario"
-        app:layout_constraintEnd_toEndOf="@+id/edtUserPassLog"
-        app:layout_constraintStart_toStartOf="@+id/edtUserPassLog"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserPassLog" />
-
-    <Button
-        android:id="@+id/btnIngresar"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtPassRegConfirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="190dp"
-        android:text="Ingresar"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:endIconContentDescription="ojo"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPassReg">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="confirmar password"
+            android:inputType="numberPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        android:text="Guardar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtPassRegConfirm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtPassRegConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassRegConfirm" />
 </androidx.constraintlayout.widget.ConstraintLayout>
